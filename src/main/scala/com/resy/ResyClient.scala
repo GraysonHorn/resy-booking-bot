@@ -123,6 +123,7 @@ class ResyClient(resyApi: ResyApi) extends Logging {
       (Json.parse(response) \ "resy_token").get.toString
         .drop(1)
         .dropRight(1)
+        .dropRight(1)
     }
 
     resyTokenResp match {
